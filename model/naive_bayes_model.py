@@ -1,0 +1,21 @@
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, matthews_corrcoef
+from model.common import load_data
+
+def run_naive_bayes():
+    X_train, X_test, X_train_scaled, X_test_scaled, y_train, y_test = load_data()
+
+    model = GaussianNB()
+    model.fit(X_train_scaled, y_train)
+
+    y_pred = model.predict(X_test_scaled)
+    y_prob = model.predict_proba(X_test_scaled)[:, 1]
+
+    return {
+        "Accuracy": accuracy_score(y_test, y_pred),
+        "AUC": roc_auc_score(y_test, y_prob),
+        "Precision": precision_score(y_test, y_pred),
+        "Recall": recall_score(y_test, y_pred),
+        "F1": f1_score(y_test, y_pred),
+        "MCC": matthews_corrcoef(y_test, y_pred)
+    }
