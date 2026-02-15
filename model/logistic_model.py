@@ -19,3 +19,4 @@ def run_logistic():
         "F1": f1_score(y_test, y_pred),
         "MCC": matthews_corrcoef(y_test, y_pred)
     }
+print(run_logistic())

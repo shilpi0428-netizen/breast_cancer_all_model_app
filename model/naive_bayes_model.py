@@ -19,3 +19,5 @@ def run_naive_bayes():
         "F1": f1_score(y_test, y_pred),
         "MCC": matthews_corrcoef(y_test, y_pred)
     }
+
+print(run_naive_bayes())
