@@ -116,7 +116,8 @@ breast-cancer-ml-app/
 └── xgboost_model.py
 
 
-ACCURACY
+# 📊 Model Comparison Table
+# ACCURACY
 
 ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC
 logistic_model |  0.9649 | 0.9960 | 0.975 | 0.9285 |0.9512 | 0.9245
@@ -126,6 +127,8 @@ naive_bayes_model | 0.9210 | 0.9890 | 0.9230 | 0.8571 | 0.8888 | 0.8291
 random_forest_model | 0.9736 | 0.9928 | 1.0 | 0.9285 | 0.9629 | 0.9441
 xgboost_model | 0.9736 | 0.9940 | 1.0 | 0.9285 | 0.9629 | 0.9441
 
+
+# 📌 Observations on Model Performance
 
 Model Name | Observation
 
