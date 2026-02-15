@@ -18,6 +18,8 @@ The goal is to compare the performance of different classification algorithms us
 
 # 📊 Dataset Description
 
+https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
+
 The Breast Cancer dataset contains diagnostic measurements computed from digitized images of breast mass samples.  
 
 - Total Instances: 569  
@@ -90,9 +92,9 @@ The application has been deployed using:
 
 Streamlit Community Cloud  
 
-Live App Link: [*(Streamlit link)*  ](https://shilpibits.streamlit.app/)
+Live App Link: https://shilpibits.streamlit.app/
 
-GitHub Repository Link: [*(GitHub repo link)*  ](https://github.com/shilpi0428-netizen/breast_cancer_all_model_app)
+GitHub Repository Link: https://github.com/shilpi0428-netizen/breast_cancer_all_model_app
 
 ---
 
