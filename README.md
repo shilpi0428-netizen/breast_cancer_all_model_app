@@ -117,29 +117,39 @@ breast-cancer-ml-app/
 
 
 # 📊 Model Comparison Table
-# ACCURACY
 
-ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC
-logistic_model |  0.9649 | 0.9960 | 0.975 | 0.9285 |0.9512 | 0.9245
-decision_tree_model | 0.9298 | 0.9246 | 0.9047 | 0.9047 | 0.9047 | 0.8492
-knn_model | 0.9561 | 0.9823 | 0.9743 | 0.9047 | 0.9382 | 0.9058
-naive_bayes_model | 0.9210 | 0.9890 | 0.9230 | 0.8571 | 0.8888 | 0.8291
-random_forest_model | 0.9736 | 0.9928 | 1.0 | 0.9285 | 0.9629 | 0.9441
-xgboost_model | 0.9736 | 0.9940 | 1.0 | 0.9285 | 0.9629 | 0.9441
+| ML Model Name | Accuracy | AUC Score | Precision | Recall | F1 Score | MCC Score |
+|---------------|----------|-----------|-----------|--------|----------|-----------|
+| Logistic Regression | 0.9649 | 0.9960 | 0.9750 | 0.9285 | 0.9512 | 0.9245 |
+| Decision Tree Classifier | 0.9298 | 0.9246 | 0.9047 | 0.9047 | 0.9047 | 0.8492 |
+| K-Nearest Neighbors (KNN) | 0.9561 | 0.9823 | 0.9743 | 0.9047 | 0.9382 | 0.9058 |
+| Naive Bayes (GaussianNB) | 0.9210 | 0.9890 | 0.9230 | 0.8571 | 0.8888 | 0.8291 |
+| Random Forest (Ensemble) | 0.9736 | 0.9928 | 1.0000 | 0.9285 | 0.9629 | 0.9441 |
+| XGBoost (Ensemble) | 0.9736 | 0.9940 | 1.0000 | 0.9285 | 0.9629 | 0.9441 |
 
+---
 
 # 📌 Observations on Model Performance
 
-Model Name | Observation
+| Model Name | Key Observations |
+|------------|------------------|
+| **Logistic Regression** | Demonstrates the **highest AUC Score (0.9960)** among all classifiers, indicating exceptional ability to distinguish between classes. Provides very high Accuracy (0.9649) and balanced Recall (0.9285), making it one of the most reliable base learners for this dataset. |
+| **Decision Tree Classifier** | Shows **lower performance** compared to ensemble methods. While it achieves decent Accuracy (0.9298), its AUC (0.9246) and MCC (0.8492) are significantly lower than others, suggesting it may not be as robust at generalizing as more complex models. |
+| **K-Nearest Neighbors (KNN)** | Shows **strong performance** with Accuracy of 0.9561 and AUC of 0.9823. Has high Precision (0.9743), but Recall (0.9047) is slightly lower than top-performing models, meaning it might miss a small percentage of positive cases. |
+| **Naive Bayes (GaussianNB)** | Yielded the **lowest overall performance** across almost all metrics, including lowest Accuracy (0.9210) and Recall (0.8571). The drop in MCC (0.8291) suggests that the assumption of feature independence may not hold perfectly for this clinical dataset. |
+| **Random Forest (Ensemble)** | One of the **two top-performing models**. Achieved highest Accuracy (0.9736) and **perfect Precision (1.0)**, indicating zero False Positives. With high MCC (0.9441) and Recall (0.9285), it is highly effective at minimizing misclassifications. |
+| **XGBoost (Ensemble)** | **Tied with Random Forest** for best performance with Accuracy of 0.9736 and Precision of 1.0. Has slightly higher AUC (0.9940) than Random Forest, suggesting a very refined decision boundary. **Ideal model** for this classification task due to high reliability and balanced metrics. |
 
-Logistic Regression | This model demonstrates the highest AUC Score (0.9960) among all classifiers, indicating an exceptional ability to distinguish between classes. It provides a very high Accuracy (0.9649) and a balanced Recall (0.9285), making it one of the most reliable base learners for this dataset.
+---
 
-Decision Tree | The Decision Tree shows lower performance compared to the ensemble methods. While it achieves a decent Accuracy (0.9298), its AUC (0.9246) and MCC (0.8492) are significantly lower than the others, suggesting it may not be as robust at generalizing as the more complex models.
+## 🏆 Best Performing Models
 
-KNN | The KNN model shows strong performance with an Accuracy of 0.9561 and an AUC of 0.9823. It has high Precision (0.9743), but its Recall (0.9047) is slightly lower than the top-performing models, meaning it might miss a small percentage of positive cases.
+**Top 2 Models:**
+1. **XGBoost** - Best overall with highest AUC (0.9940) and perfect precision
+2. **Random Forest** - Tied for accuracy with XGBoost, perfect precision (1.0)
 
-Naive Bayes | This model yielded the lowest overall performance across almost all metrics, including the lowest Accuracy (0.9210) and Recall (0.8571). The drop in MCC (0.8291) suggests that the assumption of feature independence may not hold perfectly for this clinical dataset.
-
-Random Forest | One of the two top-performing models. It achieved the highest Accuracy (0.9736) and a perfect Precision (1.0), indicating it had zero False Positives. With a high MCC (0.9441) and Recall (0.9285), it is highly effective at minimizing misclassifications.
-
-XGBoost | Tied with Random Forest for the best performance with an Accuracy of 0.9736 and Precision of 1.0. It has a slightly higher AUC (0.9940) than Random Forest, suggesting a very refined decision boundary. It is an ideal model for this classification task due to its high reliability and balanced metrics.
+**Key Insights:**
+- Ensemble methods (Random Forest & XGBoost) significantly outperform individual classifiers
+- Logistic Regression shows excellent AUC despite being a simpler model
+- Naive Bayes has the weakest performance, likely due to feature correlation
+- All models achieve >92% accuracy, indicating the dataset is well-suited for classification
