@@ -71,36 +71,6 @@ For each model, the following metrics were calculated:
 
 ---
 
-# 📊 Model Comparison Table
-
-ML Model Name Accuracy AUC Precision Recall F1 MCC
-Logistic
-Regression
-Decision Tree
-kNN
-Naive Bayes
-Random Forest
-(Ensemble)
-XGBoost
-(Ensemble)
-
-*(Replace values above with actual results from your model output.)*
-
----
-
-# 📌 Observations on Model Performance
-
-| ML Model | Observation |
-|------------|------------|
-| Logistic Regression | Performs very well due to linear separability of features. Provides stable and interpretable results. |
-| Decision Tree | Easy to interpret but prone to overfitting if not tuned properly. |
-| KNN | Sensitive to feature scaling; performs well after normalization. |
-| Naive Bayes | Assumes feature independence; performs reasonably well but slightly lower than ensemble models. |
-| Random Forest | Provides high accuracy and robustness due to ensemble averaging. Handles feature interactions effectively. |
-| XGBoost | Achieves strong performance due to gradient boosting; typically among the best performing models in classification tasks. |
-
----
-
 # 🖥️ Streamlit Web Application Features
 
 The deployed Streamlit app includes:
@@ -120,9 +90,9 @@ The application has been deployed using:
 
 Streamlit Community Cloud  
 
-Live App Link: *(Paste your Streamlit link here)*  
+Live App Link: [*(Streamlit link here)*  ](https://shilpibits.streamlit.app/)
 
-GitHub Repository Link: *(Paste your GitHub repo link here)*  
+GitHub Repository Link: [*(GitHub repo link here)*  ](https://github.com/shilpi0428-netizen/breast_cancer_all_model_app)
 
 ---
 
