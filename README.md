@@ -90,9 +90,9 @@ The application has been deployed using:
 
 Streamlit Community Cloud  
 
-Live App Link: [*(Streamlit link here)*  ](https://shilpibits.streamlit.app/)
+Live App Link: [*(Streamlit link)*  ](https://shilpibits.streamlit.app/)
 
-GitHub Repository Link: [*(GitHub repo link here)*  ](https://github.com/shilpi0428-netizen/breast_cancer_all_model_app)
+GitHub Repository Link: [*(GitHub repo link)*  ](https://github.com/shilpi0428-netizen/breast_cancer_all_model_app)
 
 ---
 
